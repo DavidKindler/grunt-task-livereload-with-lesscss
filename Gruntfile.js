@@ -1,4 +1,4 @@
-'use strict';
+ ='use strict';
  
   var LIVERELOAD_PORT = 35729,
   lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT }),
@@ -19,8 +19,6 @@ module.exports = function( grunt ) {
       development: {
         options: {
           compress: false,
-          // yuicompress: true,
-          // optimization: 2,
           banner: "/* Updated <%= grunt.template.date ('yyyy-mm-dd') %> */\n"
         },
         files: {
@@ -37,11 +35,8 @@ module.exports = function( grunt ) {
       },
        production: {
         options: {
-          // compress: true,
           cleancss: true,
           ieCompat: true,
-          // yuicompress: true,
-          // optimization: 2,
           banner: "/* Updated <%= grunt.template.date ('yyyy-mm-dd') %> */\n"
         },
         files: {
@@ -62,7 +57,6 @@ module.exports = function( grunt ) {
           '{,*/}*.html',
           'static/{,*/}*.{css,js,png,jpg,gif,svg}'
         ],
-        // tasks: ['less'],
         options: {
           livereload: LIVERELOAD_PORT
         }
@@ -71,7 +65,6 @@ module.exports = function( grunt ) {
         files: ['less/**/*.less'], // which files to watch
         tasks: ['less'],
         options: {
-        // nospawn: true,
         livereload: LIVERELOAD_PORT
         }
       }
