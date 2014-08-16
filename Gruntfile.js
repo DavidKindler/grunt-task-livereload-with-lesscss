@@ -1,4 +1,4 @@
- ='use strict';
+'use strict';
  
   var LIVERELOAD_PORT = 35729,
   lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT }),
