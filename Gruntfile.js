@@ -24,11 +24,6 @@ module.exports = function( grunt ) {
         files: {
           // target.css file: source.less file
           "css/basecamp.css": "less/basecamp.less",
-          "css/basecamp-only-icons.css" : "less/basecamp-only-icons.less",
-          "css/basecamp-only-buttons.css" : "less/basecamp-only-buttons.less",
-          "css/basecamp-legacy-header-footer-progressive.css" : "less/basecamp-legacy-header-footer-progressive.less",
-          "css/basecamp-legacy-header-footer.css" : "less/basecamp-legacy-header-footer.less",
-          "css/basecamp-no-header-footer.css" : "less/basecamp-no-header-footer.less",
           "css/thesink.css" : "less/thesink.less"
 
         }
@@ -42,11 +37,6 @@ module.exports = function( grunt ) {
         files: {
           // target.css file: source.less file
           "css/basecamp.min.css": "less/basecamp.less",
-          "css/basecamp-only-icons.min.css" : "less/basecamp-only-icons.less",
-          "css/basecamp-only-buttons.min.css" : "less/basecamp-only-buttons.less",
-          "css/basecamp-legacy-header-footer-progressive.min.css" : "less/basecamp-legacy-header-footer-progressive.less",
-          "css/basecamp-legacy-header-footer.min.css" : "less/basecamp-legacy-header-footer.less",
-          "css/basecamp-no-header-footer.min.css" : "less/basecamp-no-header-footer.less",
           "css/thesink.min.css" : "less/thesink.less"
         }
       }
