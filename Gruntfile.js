@@ -19,25 +19,29 @@ module.exports = function( grunt ) {
       development: {
         options: {
           compress: false,
+          // yuicompress: true,
+          // optimization: 2,
           banner: "/* Updated <%= grunt.template.date ('yyyy-mm-dd') %> */\n"
         },
         files: {
           // target.css file: source.less file
-          "css/basecamp.css": "less/basecamp.less",
-          "css/thesink.css" : "less/thesink.less"
+          "css/basecamp.css": "less/basecamp.less"
+         
 
         }
       },
        production: {
         options: {
+          // compress: true,
           cleancss: true,
           ieCompat: true,
+          // yuicompress: true,
+          // optimization: 2,
           banner: "/* Updated <%= grunt.template.date ('yyyy-mm-dd') %> */\n"
         },
         files: {
           // target.css file: source.less file
-          "css/basecamp.min.css": "less/basecamp.less",
-          "css/thesink.min.css" : "less/thesink.less"
+          "css/basecamp.min.css": "less/basecamp.less"
         }
       }
     },
@@ -47,6 +51,7 @@ module.exports = function( grunt ) {
           '{,*/}*.html',
           'static/{,*/}*.{css,js,png,jpg,gif,svg}'
         ],
+        // tasks: ['less'],
         options: {
           livereload: LIVERELOAD_PORT
         }
@@ -55,6 +60,7 @@ module.exports = function( grunt ) {
         files: ['less/**/*.less'], // which files to watch
         tasks: ['less'],
         options: {
+        // nospawn: true,
         livereload: LIVERELOAD_PORT
         }
       }
